@@ -1,0 +1,87 @@
+.services-section {
+  margin-top: 120px;
+
+  @media only screen and (max-width: $mobile) {
+    margin-top: 70px;
+  }
+
+  .services {
+    &__title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.2;
+      text-align: center;
+      font-family: "Open Sans Condensed", sans-serif;
+      margin-bottom: 56px;
+
+      @media only screen and (max-width: $mobile) {
+        margin-bottom: 40px;
+        font-size: 36px;
+      }
+    }
+
+    &__list {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      gap: 80px;
+
+      @media only screen and (max-width: $tablet) {
+        width: 90%;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        gap: 55px;
+      }
+    }
+
+    &-card {
+      display: flex;
+      gap: 64px;
+      align-items: center;
+      justify-content: space-between;
+
+      @media only screen and (max-width: $mobile) {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+      }
+
+      &__img {
+        @media only screen and (max-width: $mobile) {
+          max-width: 200px;
+          max-height: 200px;
+          width: 100%;
+          height: auto;
+        }
+      }
+      &__heading {
+        font-size: 24px;
+        line-height: 1.2;
+        font-family: "Open Sans Condensed";
+        margin-bottom: 24px;
+
+        @media only screen and (max-width: $mobile) {
+          font-size: 22px;
+          margin-bottom: 20px;
+        }
+      }
+
+      &__text {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+
+        @media only screen and (max-width: $mobile) {
+          font-size: 15px;
+        }
+      }
+    }
+
+    &-btn {
+      text-align: center;
+      margin-top: 60px;
+    }
+  }
+}

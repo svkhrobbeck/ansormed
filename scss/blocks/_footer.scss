@@ -1,0 +1,93 @@
+.footer {
+  margin-top: 120px;
+  background-color: $aqua;
+  padding: 64px 0 0;
+
+  @media only screen and (max-width: $mobile) {
+    padding: 36px 0 0;
+  }
+
+  &-container {
+    &__title {
+      text-align: center;
+      font-size: 36px;
+      line-height: 1.2;
+      color: $white;
+      font-family: "Open Sans Condensed", sans-serif;
+    }
+
+    &__socials {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+
+      @media only screen and (max-width: $mobile) {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 10px;
+        gap: 20px;
+      }
+    }
+
+    .gray-section {
+      background-color: $dark-gray;
+    }
+
+    &__bottom {
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 64px;
+
+      @media only screen and (max-width: $tablet) {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        margin-top: 36px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      gap: 32px;
+
+      @media only screen and (max-width: $tablet-l) {
+        gap: 22px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+
+    &__link {
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 700;
+      letter-spacing: 2px;
+
+      @media only screen and (max-width: $mobile) {
+        font-size: 15px;
+      }
+    }
+
+    .copyright {
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-family: "Open Sans Condensed", sans-serif;
+      text-align: center;
+
+      a {
+        color: $aqua;
+      }
+    }
+  }
+}

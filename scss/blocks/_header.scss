@@ -1,0 +1,118 @@
+.site-header {
+  padding: 24px 0;
+  position: sticky;
+  top: 0;
+  background-color: $white;
+
+  @media only screen and (max-width: $tablet-l) {
+    position: static;
+    background-color: transparent;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 20px;
+
+    @media only screen and (max-width: $tablet-l) {
+      flex-wrap: wrap;
+      max-width: 140px;
+      justify-content: center;
+    }
+  }
+
+  .logo__img {
+    @media only screen and (max-width: $tablet-l) {
+      max-width: 140px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  #hamburger-bar:checked {
+    + .hamburger-icons {
+      #menu {
+        display: none;
+      }
+
+      #close {
+        display: block;
+      }
+    }
+
+    ~ .site-nav .site-nav__list {
+      right: 0;
+    }
+  }
+
+  #menu,
+  #close {
+    position: fixed;
+    font-size: 40px;
+    right: 10px;
+    background-color: $aqua;
+    top: 26px;
+    display: none;
+    z-index: 101;
+    border-radius: 5px;
+  }
+
+  #menu {
+    @media only screen and (max-width: $mobile) {
+      display: block;
+    }
+  }
+
+  .site-nav {
+    &__list {
+      display: flex;
+      gap: 32px;
+
+      @media only screen and (max-width: $tablet-l) {
+        gap: 24px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        flex-direction: column;
+        position: fixed;
+        right: -100%;
+        z-index: 100;
+        top: 0;
+        padding: 26px;
+        width: 65%;
+        height: 100vh;
+        transition: 1s ease;
+        box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+          rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+          rgba(240, 46, 170, 0.1) -20px 20px,
+          rgba(240, 46, 170, 0.05) -25px 25px;
+        gap: 20px;
+        background-color: $dark-gray;
+      }
+    }
+
+    &__link {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: $black;
+      text-transform: uppercase;
+
+      @media only screen and (max-width: $tablet-l) {
+        font-size: 15px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        color: $white;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__btn {
+    @media only screen and (max-width: $mobile) {
+      display: none;
+    }
+  }
+}

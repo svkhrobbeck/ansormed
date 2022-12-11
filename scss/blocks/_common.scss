@@ -1,0 +1,106 @@
+// Fonts
+// open sans
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/2") format("woff2"), url("../../fonts/") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/") format("woff2"),
+    url("../../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// open sans condensed
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: url("../fonts/OpenSans-CondensedBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-CondensedBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+// General styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+// Body styles
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+// Container styles
+.container {
+  max-width: $desktop;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// Visually-hidden styles
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// Button styles
+.button {
+  padding: 12px 24px;
+  background-color: $pink;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: $white;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  white-space: nowrap;
+
+  @media only screen and (max-width: $tablet-l) {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+}
+
+// btn outline
+.btn-outline {
+  padding: 12px 24px;
+  border: 2px solid $white;
+  border-radius: 8px;
+  color: $white;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+}
