@@ -22,11 +22,18 @@
     }
   }
 
-  .logo__img {
-    @media only screen and (max-width: $tablet-l) {
-      max-width: 140px;
-      width: 100%;
-      height: auto;
+  .logo {
+    &__link {
+      color: $dark-gray;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $pink;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
     }
   }
 
@@ -98,6 +105,15 @@
       letter-spacing: 2px;
       color: $black;
       text-transform: uppercase;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $pink;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
 
       @media only screen and (max-width: $tablet-l) {
         font-size: 15px;

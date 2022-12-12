@@ -80,6 +80,17 @@ body {
   font-size: 15px;
   line-height: 22px;
   white-space: nowrap;
+  transition: 0.3s ease;
+  border: 2px solid $pink;
+
+  &:hover {
+    background-color: transparent;
+    color: $pink;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media only screen and (max-width: $tablet-l) {
     padding: 10px 20px;
@@ -103,4 +114,14 @@ body {
   font-weight: 700;
   font-size: 15px;
   line-height: 1.2;
+  transition: 0.3s ease;
+
+  &:hover {
+    border: 2px solid $pink;
+    background-color: $pink;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

@@ -84,5 +84,19 @@
       width: 100%;
       height: auto;
     }
+
+    &__btn {
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: $pink;
+        color: $white;
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
   }
 }
