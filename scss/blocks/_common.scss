@@ -41,6 +41,11 @@
   list-style: none;
 }
 
+*:focus {
+  outline-offset: 3px;
+  outline: 2px dotted $black;
+}
+
 // Body styles
 body {
   font-family: "Open Sans", sans-serif;
