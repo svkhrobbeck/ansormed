@@ -105,7 +105,7 @@
       letter-spacing: 2px;
       color: $black;
       text-transform: uppercase;
-      transition: 0.3s ease;
+      transition: color 0.3s ease, opacity 0.3s ease;
 
       &:hover {
         color: $pink;

@@ -71,7 +71,7 @@
       color: $white;
       font-weight: 700;
       letter-spacing: 2px;
-      transition: 0.3s ease;
+      transition: color 0.3s ease, opacity 0.4s ease;
 
       &:hover {
         color: $pink;
@@ -89,7 +89,7 @@
     .logo {
       &__link {
         color: $white;
-        transition: 0.3s ease;
+        transition: color 0.3s ease, opacity 0.4s ease;
 
         &:hover {
           color: $pink;
@@ -109,13 +109,15 @@
       font-family: "Open Sans Condensed", sans-serif;
       text-align: center;
       padding: 0 0 20px;
+      transition: opacity 0.4s ease;
+
       &:active {
         opacity: 0.6;
       }
 
       a {
         color: $aqua;
-        transition: 0.3s ease;
+        transition: color 0.3s ease;
 
         &:hover {
           color: $pink;
