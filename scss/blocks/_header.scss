@@ -2,7 +2,7 @@
   padding: 24px 0;
   position: sticky;
   top: 0;
-  background-color: $white;
+  background-color: var(--primary-bg-color);
 
   @media only screen and (max-width: $tablet-l) {
     position: static;
@@ -24,11 +24,11 @@
 
   .logo {
     &__link {
-      color: $dark-gray;
+      color: var(--footer-bg-color);
       transition: 0.3s ease;
 
       &:hover {
-        color: $pink;
+        color: var(--btn-bg-color);
       }
 
       &:active {
@@ -58,7 +58,7 @@
     position: fixed;
     font-size: 40px;
     right: 10px;
-    background-color: $aqua;
+    background-color: var(--secondary-bg-color);
     top: 26px;
     display: none;
     z-index: 101;
@@ -95,7 +95,7 @@
           rgba(240, 46, 170, 0.1) -20px 20px,
           rgba(240, 46, 170, 0.05) -25px 25px;
         gap: 20px;
-        background-color: $dark-gray;
+        background-color: var(--footer-bg-color);
       }
     }
 
@@ -103,12 +103,12 @@
       font-weight: 700;
       font-size: 16px;
       letter-spacing: 2px;
-      color: $black;
+      color: var(--title-color);
       text-transform: uppercase;
       transition: color 0.3s ease, opacity 0.3s ease;
 
       &:hover {
-        color: $pink;
+        color: var(--btn-bg-color);
       }
 
       &:active {
@@ -120,7 +120,7 @@
       }
 
       @media only screen and (max-width: $mobile) {
-        color: $white;
+        color: var(--primary-bg-color);
         font-size: 16px;
       }
     }

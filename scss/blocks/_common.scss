@@ -1,37 +1,15 @@
 // Fonts
-// open sans
-@font-face {
-  font-family: "Open Sans";
-  src: url("../../fonts/2") format("woff2"), url("../../fonts/") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
-@font-face {
-  font-family: "Open Sans";
-  src: url("../../fonts/") format("woff2"),
-    url("../../fonts/OpenSans-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-// open sans condensed
-@font-face {
-  font-family: "Open Sans Condensed";
-  src: url("../fonts/OpenSans-CondensedBold.woff2") format("woff2"),
-    url("../fonts/OpenSans-CondensedBold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-// General styles
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 * {
@@ -43,22 +21,25 @@
 
 *:focus {
   outline-offset: 3px;
-  outline: 2px dotted $black;
+  outline: 2px dotted var(--title-color);
 }
 
-// Body styles
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--primary-font-family);
+  background-color: var(--primary-bg-color);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-// Container styles
+/* CONTAINER */
 .container {
   max-width: $desktop;
   width: 100%;
   margin: 0 auto;
 }
 
-// Visually-hidden styles
+/* VISUALLY HIDDEN */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -66,31 +47,36 @@ body {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-// Button styles
+
+/* MAIN CONTENT */
+.main-content {
+  flex-grow: 1;
+}
+
+/* BUTTON */
 .button {
   padding: 12px 24px;
-  background-color: $pink;
+  background-color: var(--btn-bg-color);
   text-transform: uppercase;
   border-radius: 8px;
   font-family: "Open Sans Condensed", sans-serif;
-  color: $white;
+  color: var(--primary-bg-color);
   font-weight: 700;
   font-size: 15px;
   line-height: 22px;
   white-space: nowrap;
-  border: 2px solid $pink;
+  border: 2px solid var(--btn-bg-color);
   transition: background-color 0.3s ease, color 0.4s ease, opacity 0.4s ease;
 
   &:hover {
     background-color: transparent;
-    color: $pink;
+    color: var(--btn-bg-color);
   }
 
   &:active {
@@ -111,9 +97,9 @@ body {
 // btn outline
 .btn-outline {
   padding: 12px 24px;
-  border: 2px solid $white;
+  border: 2px solid var(--primary-bg-color);
   border-radius: 8px;
-  color: $white;
+  color: var(--primary-bg-color);
   text-transform: uppercase;
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 700;
@@ -122,8 +108,8 @@ body {
   transition: border 0.3s ease, background-color 0.4s ease, opacity 0.4s ease;
 
   &:hover {
-    border: 2px solid $pink;
-    background-color: $pink;
+    border: 2px solid var(--btn-bg-color);
+    background-color: var(--btn-bg-color);
   }
 
   &:active {

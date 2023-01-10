@@ -1,9 +1,12 @@
-// Colors
-$white: #ffffff;
-$black: #000000;
-$pink: #de2e54;
-$aqua: #0eb4c1;
-$dark-gray: #222222;
+/* COLORS */
+:root {
+  --title-color: #000;
+  --btn-bg-color: #de2e54;
+  --primary-bg-color: #fff;
+  --secondary-bg-color: #0eb4c1;
+  --primary-font-family: "Open Sans", sans-serif;
+  --footer-bg-color: #222;
+}
 
 // Breakpoints
 $desktop: 1100px;
